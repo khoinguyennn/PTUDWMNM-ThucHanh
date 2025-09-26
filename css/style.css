@@ -1,0 +1,288 @@
+/* Custom CSS for PHP Exercise Website */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    border-bottom: 3px solid #0056b3;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header background pattern với code symbols */
+header::before {
+    content: '<?php echo "Hello World"; ?> function myCode() { return true; } <div class="container"> $(document).ready() .css({color: #fff}) /* Comment */ var x = 10; if (x > 5) { console.log("test"); } </html> <body> margin: 0; padding: 20px; background: #000; <?= $variable ?> foreach($array as $item) echo $item; class MyClass { public function __construct() {} } SELECT * FROM users WHERE id = 1; INSERT INTO table VALUES ("data"); <script> alert("hello"); </script>';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+    font-family: 'Courier New', monospace;
+    color: rgba(255, 255, 255, 0.25);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.8;
+    pointer-events: none;
+    z-index: 1;
+    transform: rotate(-10deg);
+    animation: codeFloat 25s linear infinite;
+}
+
+/* Animation cho code pattern */
+@keyframes codeFloat {
+    0% {
+        transform: rotate(-15deg) translateX(-100%);
+    }
+    100% {
+        transform: rotate(-15deg) translateX(100%);
+    }
+}
+
+/* Đảm bảo nội dung header ở trên pattern */
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Pattern tĩnh bổ sung */
+header .container::before {
+    content: '{ } [ ] < > = + - * / % $ @ # & | ^ ~ ` " \' ; : , . ? ! ( ) php html css js sql json xml http https www api ajax json mysql sqlite mongodb docker git github npm yarn webpack babel react vue angular nodejs express laravel symfony codeigniter bootstrap jquery typescript python java csharp ruby golang rust swift kotlin dart flutter xamarin unity godot';
+    position: absolute;
+    top: -20px;
+    left: -50px;
+    right: -50px;
+    bottom: -20px;
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+    color: rgba(255, 255, 255, 0.15);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 2.5;
+    pointer-events: none;
+    z-index: 1;
+    letter-spacing: 10px;
+    word-spacing: 15px;
+}
+
+/* Floating code symbols */
+.code-symbol {
+    position: absolute;
+    font-family: 'Courier New', monospace;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 36px;
+    font-weight: bold;
+    pointer-events: none;
+    z-index: 1;
+    animation: floatSymbol 12s ease-in-out infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.code-symbol:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.code-symbol:nth-child(2) { top: 60%; left: 20%; animation-delay: 2s; }
+.code-symbol:nth-child(3) { top: 30%; left: 80%; animation-delay: 4s; }
+.code-symbol:nth-child(4) { top: 70%; left: 70%; animation-delay: 6s; }
+.code-symbol:nth-child(5) { top: 40%; left: 50%; animation-delay: 8s; }
+
+@keyframes floatSymbol {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+    25% { transform: translateY(-25px) rotate(90deg); opacity: 0.5; }
+    50% { transform: translateY(-15px) rotate(180deg); opacity: 0.4; }
+    75% { transform: translateY(-35px) rotate(270deg); opacity: 0.3; }
+}
+
+/* Thêm overlay nhẹ để không che pattern */
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.05);
+    z-index: 1;
+}
+
+/* Sidebar styling */
+.list-group-item.active {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+/* Main content area */
+.main-content {
+    min-height: 600px;
+}
+
+/* Code blocks */
+.code-block {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+.code-block::before {
+    content: 'PHP Code:';
+    display: block;
+    color: #68d391;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #4a5568;
+    padding-bottom: 5px;
+}
+
+/* Result boxes */
+.result-box {
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4f1d4 100%);
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.result-box h6 {
+    color: #155724;
+    margin-bottom: 10px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Exercise title */
+.exercise-title {
+    color: #2d3748;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Description box */
+.description-box {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* Navigation breadcrumb */
+.breadcrumb {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 20px;
+    }
+    
+    .code-block {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Highlight syntax */
+.php-keyword {
+    color: #ff7b7b;
+    font-weight: bold;
+}
+
+.php-string {
+    color: #7dd3fc;
+}
+
+.php-comment {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.php-variable {
+    color: #a78bfa;
+}
+
+/* Font Roboto cho tất cả elements */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Đảm bảo các heading sử dụng Roboto */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* Button text */
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Form elements */
+input, textarea, select, .form-control, .form-select {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Card titles */
+.card-title, .card-header {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation và breadcrumb */
+.nav, .navbar, .breadcrumb {
+    font-family: 'Roboto', sans-serif;
+}
