@@ -9,13 +9,22 @@
             <small class="text-light">Các đường dẫn tương đối đến các bài tập</small>
         </div>
         <div class="card-body p-0">
+            <?php
+            // Xác định đường dẫn tùy theo vị trí hiện tại
+            $is_in_exercises = (strpos($_SERVER['REQUEST_URI'], '/exercises/') !== false);
+            $home_path = $is_in_exercises ? '../index.php' : 'index.php';
+            $exercise_prefix = $is_in_exercises ? '' : 'exercises/';
+            ?>
             <div class="list-group list-group-flush">
-                <a href="../index.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">
+                <a href="<?php echo $home_path; ?>" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">
                     <i class="fas fa-home me-2"></i>Trang chủ
                 </a>
                 
-                <!-- Các bài tập -->
-                <a href="exercises/bai1.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bai1.php' ? 'active' : ''; ?>">
+                <!-- Bài tập cơ bản -->
+                <a href="<?php echo $exercise_prefix; ?>bai0.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bai0.php' ? 'active' : ''; ?>">
+                    <i class="fas fa-file-code me-2"></i>Template mẫu cho các bài tập
+                </a>
+                <a href="<?php echo $exercise_prefix; ?>bai1.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bai1.php' ? 'active' : ''; ?>">
                     <i class="fas fa-file-code me-2"></i>Bài 1: Hello World
                 </a>
                 
