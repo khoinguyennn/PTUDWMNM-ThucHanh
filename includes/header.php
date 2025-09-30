@@ -32,9 +32,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h1 class="h3 mb-0">
-                        <i class="fas fa-code me-2"></i>
-                        Bài Tập PHP của Khôi Nguyên
+                    <h1 class="h3 mb-0 d-flex align-items-center">
+                        <?php
+                        // Xác định đường dẫn logo tùy theo vị trí file
+                        $logo_path = (strpos($_SERVER['REQUEST_URI'], '/exercises/') !== false) ? '../img/logo-xmas.png' : 'img/logo-xmas.png';
+                        ?>
+                        <img src="<?php echo $logo_path; ?>" alt="Logo" class="logo-header me-2">
+                        PHP
                     </h1>
                 </div>
                 <div class="col-md-6 text-md-end">

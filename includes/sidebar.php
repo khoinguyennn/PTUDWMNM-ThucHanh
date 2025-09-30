@@ -6,7 +6,7 @@
                 <i class="fas fa-list me-2"></i>
                 Menu bài tập
             </h5>
-            <small class="text-light">Các đường dẫn tương đối đến các bài tập</small>
+            <small class="text-light">Các đường dẫn đến các bài tập</small>
         </div>
         <div class="card-body p-0">
             <?php

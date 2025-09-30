@@ -13,6 +13,24 @@ header {
     overflow: hidden;
 }
 
+/* Logo styling */
+.logo-header {
+    height: 2.3em;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    filter: brightness(1.1) contrast(1.1);
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+    line-height: 0;
+    display: inline-block;
+    transform: scale(1.1);
+}
+
+.logo-header:hover {
+    transform: scale(1.2);
+}
+
 /* Header background pattern với code symbols */
 header::before {
     content: '<?php echo "Hello World"; ?> function myCode() { return true; } <div class="container"> $(document).ready() .css({color: #fff}) /* Comment */ var x = 10; if (x > 5) { console.log("test"); } </html> <body> margin: 0; padding: 20px; background: #000; <?= $variable ?> foreach($array as $item) echo $item; class MyClass { public function __construct() {} } SELECT * FROM users WHERE id = 1; INSERT INTO table VALUES ("data"); <script> alert("hello"); </script>';

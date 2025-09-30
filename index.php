@@ -34,7 +34,7 @@ include 'includes/header.php';
                         Đây là nội dung mặc định khi chưa chọn bài tập nào. Vui lòng chọn một bài tập từ menu bên trái để bắt đầu học tập.
                     </p>
                     
-                    <!-- Quick Stats -->
+                    <!-- Quick Stats
                     <div class="row mt-4">
                         <div class="col-md-3 col-sm-6 mb-3">
                             <div class="card bg-info text-white">
@@ -72,7 +72,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
