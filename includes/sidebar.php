@@ -27,7 +27,12 @@
                 <a href="<?php echo $exercise_prefix; ?>bai1.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bai1.php' ? 'active' : ''; ?>">
                     <i class="fas fa-file-code me-2"></i>Bài 1: Hello World
                 </a>
-                
+                <a href="<?php echo $exercise_prefix; ?>bai2.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bai2.php' ? 'active' : ''; ?>">
+                    <i class="fas fa-file-code me-2"></i>Bài 2: Chương trình máy tính
+                </a>
+                <a href="<?php echo $exercise_prefix; ?>bai3.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bai3.php' ? 'active' : ''; ?>">
+                    <i class="fas fa-file-code me-2"></i>Bài 3: Ghi thông tin vào file
+                </a>
             </div>
         </div>
     </div>
