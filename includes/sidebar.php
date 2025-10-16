@@ -36,6 +36,9 @@
                 <a href="<?php echo $exercise_prefix; ?>bai4.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bai4.php' ? 'active' : ''; ?>">
                     <i class="fas fa-file-code me-2"></i>Bài 4: Database
                 </a>
+                <a href="<?php echo $exercise_prefix; ?>bai5.php" class="list-group-item list-group-item-action <?php echo basename($_SERVER['PHP_SELF']) == 'bai5.php' ? 'active' : ''; ?>">
+                    <i class="fas fa-file-code me-2"></i>Bài 5: Xem dữ liệu của bảng trong Database
+                </a>
             </div>
         </div>
     </div>
